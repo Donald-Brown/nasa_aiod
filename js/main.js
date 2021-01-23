@@ -46,16 +46,31 @@ const displayImage = (data) => {
   imageDiv.innerHTML = html;
 };
 
+// function testDate(date) {
+//   const dateRegex = /^[12][09][012][0-9]-[01][0-9]-[0-3][0-9]$/;
+//   const errorSpan = document.getElementById('date_error');
+//   if (!dateRegex.test(date)) {
+//     errorSpan.innerHTML = 'the date must be on or after 6/16/1995';
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
+
 function testDate(date) {
-  const dateRegex = /^[12][09][012][0-9]-[01][0-9]-[0-3][0-9]$/;
   const errorSpan = document.getElementById('date_error');
-  if (!dateRegex.test(date)) {
-    errorSpan.innerHTML = 'the date must be on or after 6/16/1995';
+  const oldestTime = new Date('1995-06-16').getTime();
+  const newestTime = new Date().getTime();
+  const selectedTime = new Date(date);
+  if (selectedTime < oldestTime || selectedTime > newestTime) {
+    errorSpan.innerHTML = 'Date must be between 6-16-1995 and present.';
     return false;
   } else {
     return true;
   }
 }
+
+testDate();
 
 const fetchData = (date) => {
   if (testDate(date)) {
