@@ -66,6 +66,7 @@ function testDate(date) {
     errorSpan.innerHTML = 'Date must be between 6-16-1995 and present.';
     return false;
   } else {
+    errorSpan.innerHTML = '';
     return true;
   }
 }
