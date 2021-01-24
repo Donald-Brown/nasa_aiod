@@ -22,9 +22,11 @@ h1 {
 }
 
 label {
-  /* float: left; */
+  float: left;
   /* display: block; */
   padding-left: 1em;
+  width: 7em;
+  text-align: right;
   /* padding-bottom: 0.5em; */
 }
 
@@ -53,7 +55,7 @@ input {
 } */
 
 #date_button {
-  margin-left: 9.9em;
+  margin-left: 1em;
   margin-top: 0.5em;
   margin-bottom: 1em;
   background-color: navy;
@@ -80,6 +82,7 @@ input {
 
 figure img {
   width: 100%;
+  clear: both;
 }
 
 figcaption {
@@ -110,7 +113,7 @@ figure figcaption #copyright {
 
 /* * footer */
 footer {
-  background-color: navy;
+  background-color: rgb(0, 0, 128);
   color: #fff;
 }
 
@@ -140,7 +143,7 @@ footer p {
 
   #date_button {
     margin-right: 0;
-    margin-left: 10em;
+    margin-left: 1em;
   }
 
   h1 {
@@ -152,6 +155,12 @@ footer p {
     width: 769px;
     margin: 2em auto;
     box-shadow: 4px 4px 7px rgba(0, 0, 128, 0.2);
+    border-radius: 3px;
+  }
+
+  footer {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 
   html {
